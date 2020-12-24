@@ -11,6 +11,7 @@ function getDate() {
   }일`;
 }
 
+
 function init() {
   getDate();
 }

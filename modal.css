@@ -30,7 +30,7 @@
 .modal_content {
   position: relative;
   top: -33px;
-  height: 380px;
+  height: 400px;
   border-radius: 6px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background-color: white;
@@ -85,8 +85,9 @@ input[type="text"] {
   color: #878481;
   background-color: #f5f4f3;
   padding: 0 20px;
-  /* margin-top: 250px; */
+  margin-top: -10px;
   border-radius: 4px;
+  
 }
 
 .js-toDoList {
