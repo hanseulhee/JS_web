@@ -1,5 +1,5 @@
 ### JS_web
-##### 생산성 웹페이지
+##### Vanilla Javascript를 이용한 생산성 웹페이지
 
 --- 
 
