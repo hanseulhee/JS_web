@@ -12,6 +12,3 @@
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/63100352/103063759-a146ae00-45f5-11eb-8dc4-47fce3aa6d36.gif)
 
 
-* Modal
-
-* delete 기능
