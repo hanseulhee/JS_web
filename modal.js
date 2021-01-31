@@ -5,11 +5,11 @@ const modal_content = modal.querySelector(".modal_content");
 
 const HIDDEN_CN = "hidden";
 
-function handleOverClick() {
+const handleOverClick = () => {
   modal.classList.add(HIDDEN_CN);
-}
+};
 
-function handleClick(event) {
+const handleClick = (event) =>{
   const clickedItem = event.target;
   const parents = clickedItem.parentNode;
 
@@ -20,12 +20,12 @@ function handleClick(event) {
   name.innerText = parents.querySelector(".name").innerText;
 
   modal_overlay.addEventListener("click", handleOverClick);
-}
+};
 
-function init() {
+const modalinit = () =>{
   itemList.forEach(function (item) {
     item.addEventListener("click", handleClick);
   });
-}
+};
 
-init();
+modalinit();

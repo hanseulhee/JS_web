@@ -5,29 +5,29 @@ const greeting = document.querySelector(".js-greetings");
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
 
-function saveName(text) {
+const saveName = (text) =>{
   localStorage.setItem(USER_LS, text);
-}
+};
 
-function handleSubmit(event) {
+const handleSubmit = (event) => {
   event.preventDefault();
   const currentValue = input.value;
   paintGreeting(currentValue);
   saveName(currentValue);
-}
+};
 
-function askForName() {
+const askForName = () =>{
   form.classList.add(SHOWING_CN);
   form.addEventListener("submit", handleSubmit);
-}
+};
 
-function paintGreeting(text) {
+const paintGreeting = (text) =>{
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
   greeting.innerText = `Hello ${text}`;
-}
+};
 
-function loadName() {
+const loadName = () => {
   const currentUser = localStorage.getItem(USER_LS);
   if (currentUser === null) {
     // she is not
@@ -36,10 +36,10 @@ function loadName() {
     // she is
     paintGreeting(currentUser);
   }
-}
+};
 
-function init() {
+const grettinginit = () =>{
   loadName();
-}
+};
 
-init();
+grettinginit();

@@ -12,7 +12,8 @@ const getDate = () => {
 };
 
 
-const init = () => {
+const dateinit = () => {
   getDate();
 };
-init();
+
+dateinit();

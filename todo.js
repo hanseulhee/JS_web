@@ -6,7 +6,7 @@ const TODOS_LS = "toDos";
 
 let toDos = [];
 
-function deleteToDo(event) {
+const deleteToDo = (event) =>{
   const btn = event.target;
   const li = btn.parentNode;
   toDoList.removeChild(li);
@@ -15,13 +15,13 @@ function deleteToDo(event) {
   });
   toDos = cleanToDos;
   saveToDos();
-}
+};
 
-function saveToDos() {
+const saveToDos = () =>{
   localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
-}
+};
 
-function paintToDo(text) {
+const paintToDo = (text) =>{
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
   const span = document.createElement("span");
@@ -40,16 +40,16 @@ function paintToDo(text) {
   };
   toDos.push(toDoObj);
   saveToDos();
-}
+};
 
-function handleSubmit(event) {
+const handleSubmit = (event) =>{
   event.preventDefault();
   const currentValue = toDoInput.value;
   paintToDo(currentValue);
   toDoInput.value = "";
-}
+};
 
-function loadToDos() {
+const loadToDos = () =>{
   const loadedToDos = localStorage.getItem(TODOS_LS);
 
   if (loadedToDos !== null) {
@@ -58,11 +58,11 @@ function loadToDos() {
       paintToDo(toDos.text);
     });
   }
-}
+};
 
-function init() {
+const todoinit = () => {
   loadToDos();
   toDoForm.addEventListener("submit", handleSubmit);
-}
+};
 
-init();
+todoinit();
