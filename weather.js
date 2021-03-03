@@ -21,7 +21,7 @@ const saveCoords = (coordsObj) =>{
   localStorage.setItem(COORDS, JSON.stringify(coordsObj));
 }
 
-function handleGeoSuccess(position) {
+const handleGeoSuccess = (position) => {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   const coordsObj = {
